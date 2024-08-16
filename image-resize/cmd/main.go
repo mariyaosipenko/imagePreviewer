@@ -41,6 +41,7 @@ func main() {
 	router.Use(middleware.Recoverer)
 	router.Use(middleware.URLFormat)
 	//http://localhost:8082/100/100/raw.githubusercontent.com/OtusGolang/final_project/master/examples/image-previewer/_gopher_original_1024x504.jpg
+	//"/{width:[0-9]+}/{height:[0-9]+}/{url:[0-9a-zA-Z.\\/_-]+}"
 	router.Get("/{width:[0-9]+}/{height:[0-9]+}/*", getimage.New(log, minioStorage))
 
 	log.Info("start server", slog.String("address", cfg.Address))

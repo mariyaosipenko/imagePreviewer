@@ -3,6 +3,7 @@ package getimage
 import (
 	"bytes"
 	"image"
+	"os"
 	"testing"
 )
 
@@ -12,7 +13,7 @@ func TestGetImageHandler(t *testing.T) {
 
 func TestResizeImage(t *testing.T) {
 	// 1. Set up input
-	originalImageBytes := []byte{ /* Sample image data */ }
+	originalImageBytes, err := os.ReadFile("img.jpg")
 	width, height := 100, 50
 	// 2. Call the function
 	resizedImageBytes, err := resizeImage(originalImageBytes, width, height)
