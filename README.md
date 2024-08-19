@@ -9,8 +9,6 @@
 
 ## API Reference
 
-#### Get all items
-
 ```http
   GET /${width}/${height}/${url}
 ```
