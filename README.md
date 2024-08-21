@@ -36,23 +36,17 @@ http://localhost:8082/150/100/habrastorage.org/r/w1560/getpro/habr/post_images/1
 
 ## Environment Variables
 
-Переменные окружение, которые есть в проекте
+Переменные окружения, которые есть в проекте
 
-`ENV = local` ```(local, dev, prod)```
-
-`MINIO_ENDPOINT="localhost:9000"`
-
-`MINIO_PORT=9000`
-
-`MINIO_ACCESSKEY="minioadmin"`
-
-`MINIO_SECRETKEY="minioadmin"`
-
-`MINIO_BUCKET="dev-minio"`
-
-`HTTP_SERVER_ADDRESS="localhost:8082"`
-
-`HTTP_SERVER_TIMEOUT="4s"`
-
-`HTTP_SERVER_IDLE_TIMEOUT="60s"`
+```
+ENV=local # (local, dev, prod)
+MINIO_ENDPOINT=minio:9000
+MINIO_PORT=9000
+MINIO_ACCESSKEY=minioadmin
+MINIO_SECRETKEY=minioadmin
+MINIO_BUCKET=dev-minio
+HTTP_SERVER_ADDRESS=localhost:8082
+HTTP_SERVER_TIMEOUT=4s
+HTTP_SERVER_IDLE_TIMEOUT=60s
+```
 
